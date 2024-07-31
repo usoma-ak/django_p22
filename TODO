@@ -1,0 +1,21 @@
+server {
+    listen       80;
+    server_name  usoma.falcon-uz.uz;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+
+    location /static/ {
+        root /var/www/usoma/django_p22/backend;
+    }
+
+    location /media/ {
+        root /var/www/usoma/django_p22/backend;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/var/www/usoma/django_p22/backend/falcon.sock;
+    }
+
+}
+
