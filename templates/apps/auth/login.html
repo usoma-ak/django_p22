@@ -7,10 +7,11 @@
         <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
             <a class="d-flex flex-center mb-4" href="{% url 'product_list_page' %}">
                 <img class="me-2"
-                     src="{% static 'apps/assets/img/icons/spot-illustrations/falcon.png' %}"
+                     src="{% static 'apps/assets/img/icons/spot-illustrations/m5.png' %}"
+                        {#                     src="{% static 'apps/assets/img/icons/spot-illustrations/falcon.png' %}"#}
                      alt=""
                      width="58"/>
-                <span class="font-sans-serif fw-bolder fs-5 d-inline-block">falcon</span></a>
+                <span class="font-sans-serif fw-bolder fs-5 d-inline-block">BMW</span></a>
             <div class="card">
                 <div class="card-body p-4 p-sm-5">
                     <div class="row flex-between-center mb-2">
@@ -53,13 +54,12 @@
                         <div class="divider-content-center">or log in with</div>
                     </div>
                     <div class="col-sm-6">
-                        <a class="btn btn-outline-google btn-sm d-block w-100"
+                        <a class="btn btn-outline-google-plus btn-sm d-block w-100"
                            href="{% provider_login_url 'google' %}">
-                            <span class="fab fa-google me-2" data-fa-transform="grow-8"></span>
-                            Google
+                            <span class="fab fa-google-plus-g me-2" data-fa-transform="grow-8"></span>
+                            google
                         </a>
                     </div>
-
                     {#                    <div class="col-sm-6">#}
                     {#                        <a class="btn btn-outline-facebook btn-sm d-block w-100"#}
                     {#                           href="{% provider_login_url 'facebook' %}">#}

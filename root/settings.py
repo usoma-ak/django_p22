@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.telegram',
+    # 'allauth.socialaccount.providers.telegram',
 ]
 
 MIDDLEWARE = [
@@ -228,9 +228,6 @@ CELERY_RESULT_BACKEND = 'django-db'
 
 LOGIN_REDIRECT_URL = '/'
 
-
-
-
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -249,25 +246,25 @@ SOCIALACCOUNT_PROVIDERS = {
             'profile',
             'email'
         ]
-    },
-    # 'facebook': {
-    #     'METHOD': 'oauth2',
-    #     'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
-    #     'SCOPE': ['email', 'public_profile'],
-    #     'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-    #     'INIT_PARAMS': {'cookie': True},
-    #     'FIELDS': [
-    #         'id',
-    #         'first_name',
-    #         'last_name',
-    #         'name',
-    #         'picture',
-    #         'short_name',
-    #         'email'
-    #     ],
-    #     'VERSION': 'v20.0',
-    #     'GRAPH_API_URL': 'https://graph.facebook.com/v20.0',
-    # },
-    'telegram': {
     }
+    #     # 'facebook': {
+    #     #     'METHOD': 'oauth2',
+    #     #     'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
+    #     #     'SCOPE': ['email', 'public_profile'],
+    #     #     'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+    #     #     'INIT_PARAMS': {'cookie': True},
+    #     #     'FIELDS': [
+    #     #         'id',
+    #     #         'first_name',
+    #     #         'last_name',
+    #     #         'name',
+    #     #         'picture',
+    #     #         'short_name',
+    #     #         'email'
+    #     #     ],
+    #     #     'VERSION': 'v20.0',
+    #     #     'GRAPH_API_URL': 'https://graph.facebook.com/v20.0',
+    #     # },
+    #     'telegram': {
+    #     }
 }
